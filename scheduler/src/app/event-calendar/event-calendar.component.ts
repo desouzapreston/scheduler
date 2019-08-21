@@ -17,7 +17,7 @@ import {
   addHours
 } from 'date-fns';
 import { Subject } from 'rxjs';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
   CalendarEvent,
   CalendarEventAction,
@@ -49,7 +49,7 @@ const colors: any = {
 @NgModule({
   imports: 
   [
-    NgbModule,
+    NgbModal,
   ],
 })
 export class EventCalendarComponent implements OnInit {
@@ -130,7 +130,7 @@ export class EventCalendarComponent implements OnInit {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModule) {}
+  constructor(private modal: NgbModal) {}
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {

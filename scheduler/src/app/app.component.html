@@ -1,3 +1,21 @@
-<h1>
-    HelloWorld!
-</h1>
+<h1>Event Calendar Sign-Ups</h1>
+
+<div class="signup-container">
+    <mat-form-field>
+        <input matInput placeholder="Available Models">
+    </mat-form-field>
+
+    <mat-form-field>
+        <app-date-time-picker formControlName="activeEndDate" name="activeEndDate"></app-date-time-picker>
+        <div class="text-danger" *ngIf="formGroup.get('activeEndDate').errors?.required">Active End Date is required.
+        </div>
+        <div class="text-danger" *ngIf="formGroup.get('activeEndDate')?.value && formGroup.get('activeEndDate')?.errors?.isValid">Active End Date must be a valid date.
+        </div>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-select placeholder="Select">
+            <mat-option value="Driver">Driver A</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

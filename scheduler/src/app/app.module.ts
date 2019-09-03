@@ -26,6 +26,7 @@ const modules = [
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    [...modules],
   ],
   exports: [
   ],

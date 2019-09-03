@@ -1,18 +1,25 @@
 <h1>Event Calendar Sign-Ups</h1>
-<form>
-    <div class="signup-container">
-        <mat-form-field>
-            <input matInput placeholder="Available Models">
-        </mat-form-field>
-    </div>
-    <mat-form-field>
-        <!--Insert timeslot picker-->
-    </mat-form-field>
-    <div>
-        <mat-form-field>
-            <mat-select placeholder="Select">
-                <mat-option value="Driver">Driver A</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
+<form [formGroup]="driverForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name: 
+        <input type="text" [formControlName]="nameOfDriver">
+    </label>
+    <!-- <p>
+        Value: {{ nameOfDriver.value }}
+    </p> -->
+    <p>
+        <!--component.ts function onSubmit() not referencing nameOfDriver, Due to change into formBuilder-->
+        <button (click)="updateName()">Update</button>
+    </p>
+
+    <!--@ToDo: -->
+    <!--Insert timeslot picker-->
+
+    <!--Insert Vehicle Model-->
+
+    <!--Insert Staff Person-->
+
+    <p>
+        <button type="submit" [disabled]="!driverForm.valid">Submit Appointment Request</button>
+    </p>
 </form>

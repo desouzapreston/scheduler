@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { EventDisplayComponent } from './event-display/event-display.component';
 import { MatRippleModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
 
 // TODO: Write a lot more components/Testing gitTree
 const modules = [
@@ -26,6 +27,7 @@ const modules = [
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     [...modules],
   ],
   exports: [

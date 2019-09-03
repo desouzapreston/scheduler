@@ -6,11 +6,7 @@
         </mat-form-field>
     </div>
     <mat-form-field>
-        <app-date-time-picker formControlName="activeEndDate" name="activeEndDate"></app-date-time-picker>
-        <div class="text-danger" *ngIf="formGroup.get('activeEndDate').errors?.required">Active End Date is required.
-        </div>
-        <div class="text-danger" *ngIf="formGroup.get('activeEndDate')?.value && formGroup.get('activeEndDate')?.errors?.isValid">Active End Date must be a valid date.
-        </div>
+        <!--Insert timeslot picker-->
     </mat-form-field>
     <div>
         <mat-form-field>

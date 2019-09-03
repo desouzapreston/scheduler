@@ -7,15 +7,6 @@ import { AppComponent } from './app.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { EventDisplayComponent } from './event-display/event-display.component';
 import { MatRippleModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library as fontLibrary } from '@fortawesome/fontawesome-svg-core';
-import { faCalendar,  faClock } from '@fortawesome/free-regular-svg-icons';
-
-fontLibrary.add(
-  faCalendar,
-  faClock
-);
 
 // TODO: Write a lot more components/Testing gitTree
 const modules = [
@@ -35,12 +26,8 @@ const modules = [
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule,
-    [...modules],
-
   ],
   exports: [
-    [...modules],
   ],
   providers:[],
   bootstrap: [AppComponent]

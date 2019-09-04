@@ -8,6 +8,8 @@ import { EventCalendarComponent } from './event-calendar/event-calendar.componen
 import { EventDisplayComponent } from './event-display/event-display.component';
 import { MatRippleModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
 
 // TODO: Write a lot more components/Testing gitTree
 const modules = [
@@ -29,6 +31,8 @@ const modules = [
     FormsModule,
     ReactiveFormsModule,
     [...modules],
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
   ],
   exports: [
   ],

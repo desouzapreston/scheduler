@@ -11,14 +11,6 @@ import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { CreateVehiclesComponent } from '../create-vehicles/create-vehicles.component';
 
-
-// TODO: Write a lot more components/Testing gitTree
-const modules = [
-  MatButtonModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatRippleModule
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,13 +24,16 @@ const modules = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    [...modules],
-    OwlDateTimeModule, 
+    OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
   ],
   exports: [
   ],
-  providers:[],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -28,6 +28,7 @@
         "@ng-bootstrap/ng-bootstrap": "^5.1.0",
         "core-js": "^2.5.4",
         "date-fns": "^2.0.0",
+        "firebase-functions": "^3.2.0",
         "ng-pick-datetime": "^7.0.0",
         "rxjs": "~6.5.2",
         "tslib": "^1.9.0",

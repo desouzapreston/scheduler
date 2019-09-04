@@ -1,1 +1,8 @@
 @import "~ng-pick-datetime/assets/style/picker.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.normal-form {
+    display: grid;
+    align-content: start;
+    justify-content: start;
+    grid-gap: 3px;
+}

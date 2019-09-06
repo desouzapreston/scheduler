@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-add-vehicle',
-  templateUrl: './add-vehicle.component.html',
-  styleUrls: ['./add-vehicle.component.css']
+  templateUrl: './add-vehicle.component.html'
 })
 export class AddVehicleComponent implements OnInit {
 

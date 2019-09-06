@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+
+// class Vehicle {
+//   constructor(public make: any, public model: any, public year: any) {
+//   }
+// }
 @Component({
   selector: 'app-create-vehicles',
   templateUrl: './create-vehicles.component.html',
@@ -7,12 +12,10 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class CreateVehiclesComponent implements OnInit {
   vehicleCreateForm: FormGroup;
-
+  // public vehicles: AngularFireList<Vehicle[]>;
   constructor(private fb: FormBuilder) {
+    
 
-  }
-  onSubmit(){
-    console.log(this.vehicleCreateForm.value);
   }
   updateMake() {
     //@ToDo: connect to Firebase

@@ -1,10 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-
-class Vehicle {
-  constructor(public make, public model, public year){
-  }
-}
 
 @Component({
   selector: 'app-root',
@@ -12,9 +6,7 @@ class Vehicle {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  public vehicles: AngularFireList<Vehicle[]>;
-  constructor(db: AngularFireDatabase) {
-    this.vehicles = db.list('/vehicles');
+  constructor() {
   }
 
   ngOnInit() {

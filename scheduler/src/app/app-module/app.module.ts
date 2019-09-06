@@ -42,4 +42,4 @@ import { environment } from 'src/environments/environment';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

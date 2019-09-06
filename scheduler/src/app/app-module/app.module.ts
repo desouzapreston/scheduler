@@ -44,7 +44,7 @@ import { environment } from 'src/environments/environment';
   ],
   exports: [
   ],
-  providers: [{ provide: FirestoreSettingsToken, useValue: {} }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

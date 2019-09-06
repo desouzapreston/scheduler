@@ -1,5 +1,5 @@
 <h1>Vehicle Registration</h1>
-<form [formGroup]="vehicleCreateForm" (ngSubmit)="onSubmit()" class="normal-form">
+<form [formGroup]="vehicleCreateForm" [hidden]="success" (ngSubmit)="submitVehicle()" class="normal-form">
     <mat-form-field appearance="outline">
         <mat-label>Vehicle Make:</mat-label>
         <input matInput type="text" formControlName="makeOfVehicle">
@@ -20,9 +20,13 @@
         <mat-hint>example: 2000</mat-hint>
         <mat-error>This field is required</mat-error>
     </mat-form-field>
+
+    <button type="button" mat-raised-button color="primary" [disabled]="vehicleCreateForm.invalid" (click)="onSubmit()">
+        Create Vehicle
+    </button>
+
 </form>
 
-
-<button type="button" mat-raised-button color="primary" [disabled]="vehicleCreateForm.invalid" (click)="onSubmit()">
-    Create Vehicle
-</button>
+<div *ngIf="success">
+    Vehicle Imported Successfully
+</div>

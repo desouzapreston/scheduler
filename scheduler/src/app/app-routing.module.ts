@@ -2,15 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {APP_BASE_HREF, CommonModule} from '@angular/common';
 
-import { AddVehicleComponent } from './vehicle/add-vehicle.component';
-import { VehicleListComponent } from './vehicle/vehicle-list.component';
-import { EditVehicleComponent } from './vehicle/edit-vehicle.component';
+import { AppComponent } from './app-component/app.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/app-root', pathMatch: 'full' },
-  { path: 'app-add-vehicle', component: AddVehicleComponent },
-  { path: 'app-vehicle-list', component: VehicleListComponent },
-  { path: 'app-edit-vehicle/:id', component: EditVehicleComponent }
 ];
 
 @NgModule({

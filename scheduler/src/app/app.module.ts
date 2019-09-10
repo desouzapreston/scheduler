@@ -11,15 +11,9 @@ import { CreateVehiclesComponent } from './create-vehicles/create-vehicles.compo
 import { AppComponent } from './app-component/app.component';
 import { AppRoutingModule } from './app-routing.module';
 //db
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFirestoreModule, FirestoreSettingsToken } from 'angularfire2/firestore';
-import { AngularFireStorageModule } from 'angularfire2/storage';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { environment } from 'src/environments/environment';
-import { AddVehicleComponent } from './vehicle/add-vehicle.component';
-import { EditVehicleComponent } from './vehicle/edit-vehicle.component';
-import { VehicleListComponent } from './vehicle/vehicle-list.component';
+
 
 
 @NgModule({
@@ -28,9 +22,6 @@ import { VehicleListComponent } from './vehicle/vehicle-list.component';
     EventCalendarComponent,
     EventDisplayComponent,
     CreateVehiclesComponent,
-    AddVehicleComponent,
-    EditVehicleComponent,
-    VehicleListComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,11 +35,6 @@ import { VehicleListComponent } from './vehicle/vehicle-list.component';
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    AngularFirestoreModule,
   ],
   exports: [
   ],

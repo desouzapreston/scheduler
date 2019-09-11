@@ -9,7 +9,8 @@ import { tap } from 'rxjs/operators';
 @Component({
   selector: 'app-create-vehicles',
   templateUrl: './create-vehicles.component.html',
-  styleUrls: ['./create-vehicles.component.css']
+  styleUrls: ['./create-vehicles.component.css'],
+  providers: []
 })
 export class CreateVehiclesComponent implements OnInit {
   vehicleCreateForm: FormGroup;

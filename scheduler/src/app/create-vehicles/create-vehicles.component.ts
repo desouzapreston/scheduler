@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 // import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { tap } from 'rxjs/operators';
 
 
 
@@ -14,8 +13,7 @@ import { tap } from 'rxjs/operators';
 })
 export class CreateVehiclesComponent implements OnInit {
   vehicleCreateForm: FormGroup;
-  loading = false;
-  success = false;
+  
   constructor(private fb: FormBuilder, private fs: AngularFirestore) {
   }
   ngOnInit() {
@@ -24,28 +22,8 @@ export class CreateVehiclesComponent implements OnInit {
       modelOfVehicle: ['Civic'],
       yearOfVehicle: [2007],
     })
-    this.preloadData()
   }
-  async submitVehicle() {
-    this.loading = true;
-    const formValue = this.vehicleCreateForm.value;
-    try {
-      await this.fs.collection('Inventory').add(formValue);
-      this.success = true;
-    } catch(err) {
-      console.error(err)
-    }
-    this.loading = false;
-  }
-  preloadData() {
-    this.fs.doc('Inventory/vehicles').valueChanges().pipe(
-      tap(data => {
-        this.vehicleCreateForm.patchValue(data)
-      })
-    )
-    .subscribe()
-  }
-
+  
 }
 
 

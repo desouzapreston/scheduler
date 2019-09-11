@@ -12,7 +12,10 @@ import { AppComponent } from './app-component/app.component';
 import { AppRoutingModule } from './app-routing.module';
 //db
 
+import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
 
@@ -35,10 +38,13 @@ import { environment } from 'src/environments/environment';
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   exports: [
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

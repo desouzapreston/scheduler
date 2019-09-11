@@ -2,11 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {APP_BASE_HREF, CommonModule} from '@angular/common';
 
-import { AppComponent } from './app-component/app.component';
-
-const routes: Routes = [
-  { path: '', redirectTo: '/app-root', pathMatch: 'full' },
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [

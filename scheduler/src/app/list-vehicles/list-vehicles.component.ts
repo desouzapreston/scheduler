@@ -1,5 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { MatTableDataSource, MatPaginator, MatSort, MatTable } from '@angular/material';
+import { CatalogItem } from '../shared/catalog-item';
+import { Subscription } from 'rxjs';
+import { AppService } from '../shared/app.service';
 
 @Component({
   selector: 'app-list-vehicles',
@@ -13,12 +16,24 @@ export class ListVehiclesComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['name', 'description', 'price']
 
-  dataSource: MatTableDataSource<Product>
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
+  subscription: Subscription
+
+  source: MatTableDataSource<CatalogItem>
   
 
-  constructor() { }
+  constructor(private appService: AppService) { }
+
+  initializeSource(catalogItem: CatalogItem[]) {
+    this.source = new MatTableDataSource(catalogItem)
+    this.source.paginator = this.paginator;
+    this.source.sort = this.sort;
+  }
 
   ngOnInit() {
+    let catalogItem = this.appService.read<CatalogItem>("CatalogItem")
   }
 
 }

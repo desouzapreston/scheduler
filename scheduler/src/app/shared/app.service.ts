@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import {
-  AngularFirestoreDocument,
   AngularFirestore,
   AngularFirestoreCollection
-} from "angularfire2/firestore";
+} from "@angular/fire/firestore";
 import { DataObject } from "./data-object";
 import { v4 as uuid } from 'uuid';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -29,5 +29,10 @@ export class AppService {
     }).catch(err => {
       console.error("error: " + dataObject + " " + err)
     })
+  }
+  read<T>(collectionName: string): Observable<T[]> {
+    let collection: AngularFirestoreCollection<T> = this.angularFirestore.collection(collectionName)
+    console.log("read", collectionName)
+    return collection.valueChanges()
   }
 }

@@ -10,7 +10,7 @@
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
         </mat-form-field>
 
-        <table mat-table [dataSource]="dataSource" mat-sort class="mat-elevation-z8 container">
+        <table mat-table #table [dataSource]="source" mat-sort class="mat-elevation-z8 container">
 
             <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef> Name </th>

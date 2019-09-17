@@ -5,13 +5,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { EventDisplayComponent } from './event-display/event-display.component';
-import { MatRippleModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { 
+  MatRippleModule, 
+  MatButtonModule, 
+  MatFormFieldModule, 
+  MatInputModule, 
+  MatTableModule, 
+  MatPaginatorModule } from '@angular/material';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { MatCardModule } from '@angular/material/card';
 import { CreateVehiclesComponent } from './create-vehicles/create-vehicles.component';
 import { AppComponent } from './app-component/app.component';
 import { AppRoutingModule } from './app-routing.module';
-//db
 
+//db
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
@@ -36,6 +43,9 @@ import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
     ReactiveFormsModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,

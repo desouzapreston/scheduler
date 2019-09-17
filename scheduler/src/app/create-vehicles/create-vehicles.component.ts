@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 // import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { AppService } from '../shared/app.service';
 
 
 
@@ -14,7 +15,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class CreateVehiclesComponent implements OnInit {
   vehicleCreateForm: FormGroup;
   
-  constructor(private fb: FormBuilder, private fs: AngularFirestore) {
+  constructor(private fb: FormBuilder, private appService: AppService) {
   }
   ngOnInit() {
     this.vehicleCreateForm = this.fb.group({
@@ -23,7 +24,10 @@ export class CreateVehiclesComponent implements OnInit {
       yearOfVehicle: [2007],
     })
   }
-  
+  onSubmit() {
+    let dataObject = this.vehicleCreateForm.value
+    this.appService.createUpdate("Vehicle", dataObject)
+  }
 }
 
 

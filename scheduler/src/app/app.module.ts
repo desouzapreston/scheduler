@@ -15,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
+// import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
 
@@ -25,6 +26,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
     EventCalendarComponent,
     EventDisplayComponent,
     CreateVehiclesComponent,
+    ListVehiclesComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,4 +49,4 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 })
 export class AppModule { }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+// platformBrowserDynamic().bootstrapModule(AppModule);

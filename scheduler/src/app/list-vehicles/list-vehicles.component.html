@@ -1,0 +1,55 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Vehicle List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+        <button mat-raised-button (click)="onCreate()" color="primary">Add</button>
+
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+
+        <table mat-table [dataSource]="dataSource" mat-sort class="mat-elevation-z8 container">
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Price </th>
+                <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            <ng-container matColumnDef="loading">
+                <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
+                    Loading data...
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="noData">
+                <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
+                    No data.
+                </td>
+            </ng-container>
+
+            <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}">
+            </tr>
+            <tr mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}">
+            </tr>
+        </table>
+
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" [pageSize]="100">
+        </mat-paginator>
+    </mat-card-footer>
+</mat-card>

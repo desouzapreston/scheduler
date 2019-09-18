@@ -18,7 +18,7 @@ export class ListVehiclesComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['name', 'description', 'price']
 
   // Added {read:....:false} to both @ViewChild property decorators
-  // Fixed bug fix: of expecting two args
+  // Fixed bug fix: of expecting two arguments & static flag
   @ViewChild(MatPaginator, { read: true, static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { read: true, static: false }) sort: MatSort;
 

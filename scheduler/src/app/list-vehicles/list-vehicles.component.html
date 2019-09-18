@@ -10,41 +10,41 @@
             <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
         </mat-form-field>
 
-        <table mat-table [dataSource]="dataSource" mat-sort class="mat-elevation-z8 container">
+        <table mat-table mat-sort class="mat-elevation-z8 container" [dataSource]="dataSource">
 
             <ng-container matColumnDef="makeOfVehicle">
                 <th mat-header-cell *matHeaderCellDef> Make </th>
-                <td mat-cell *matCellDef="let vehicle"> {{vehicle.make}} </td>
+                <td mat-cell *matCellDef="let vehicle"> {{vehicle.makeOfVehicle}} </td>
             </ng-container>
 
             <ng-container matColumnDef="modelOfVehicle">
                 <th mat-header-cell *matHeaderCellDef> Model </th>
-                <td mat-cell *matCellDef="let vehicle"> {{vehicle.model}} </td>
+                <td mat-cell *matCellDef="let vehicle"> {{vehicle.modelOfVehicle}} </td>
             </ng-container>
 
             <ng-container matColumnDef="yearOfVehicle">
                 <th mat-header-cell *matHeaderCellDef> Year </th>
-                <td mat-cell *matCellDef="let vehicle"> {{vehicle.year}} </td>
+                <td mat-cell *matCellDef="let vehicle"> {{vehicle.yearOfVehicle}} </td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-            <!-- <ng-container matColumnDef="loading">
+            <ng-container matColumnDef="loading">
                 <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
                     Loading data...
                 </td>
-            </ng-container> -->
-            <!-- <ng-container matColumnDef="noData">
+            </ng-container>
+            <ng-container matColumnDef="noData">
                 <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
                     No data.
                 </td>
-            </ng-container> -->
+            </ng-container>
 
-            <!-- <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}">
+            <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}">
             </tr>
             <tr mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}">
-            </tr> -->
+            </tr>
         </table>
 
     </mat-card-content>

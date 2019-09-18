@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class ListVehiclesComponent implements OnInit, OnDestroy {
 
-  displayedColumns: string[] = ['make', 'model', 'year'] //https://blog.angular-university.io/angular-material-data-table/
+  displayedColumns: string[] = ['makeOfVehicle', 'modelOfVehicle', 'yearOfVehicle'] //https://blog.angular-university.io/angular-material-data-table/
 
   // Added {read:....:false} to both @ViewChild property decorators
   // Fixed bug fix: of expecting two arguments & static flag

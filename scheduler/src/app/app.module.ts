@@ -23,6 +23,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
+import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 
@@ -34,6 +35,7 @@ import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
     EventDisplayComponent,
     CreateVehiclesComponent,
     ListVehiclesComponent,
+    AppointmentBookingComponent,
   ],
   imports: [
     BrowserModule,

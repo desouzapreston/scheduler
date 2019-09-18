@@ -16,8 +16,8 @@ export class ListVehiclesComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['name', 'description', 'price']
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { read: true, static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { read: true, static: false }) sort: MatSort;
 
   subscription: Subscription
 
@@ -26,14 +26,18 @@ export class ListVehiclesComponent implements OnInit, OnDestroy {
 
   constructor(private appService: AppService) { }
 
-  initializeSource(catalogItem: CatalogItem[]) {
-    this.source = new MatTableDataSource(catalogItem)
+  initializeSource(catalogItems: CatalogItem[]) {
+    this.source = new MatTableDataSource(catalogItems)
     this.source.paginator = this.paginator;
     this.source.sort = this.sort;
   }
 
   ngOnInit() {
-    let catalogItem = this.appService.read<CatalogItem>("CatalogItem")
+    // let catalogItem = this.appService.read<CatalogItem>("CatalogItem")cata
+    // this.subscription = catalogItems.subscribe((data: CatalogItem[]) => {
+    //   console.log("")
+
+    // })
   }
 
 }

@@ -4,12 +4,12 @@
         <mat-label>Name:</mat-label>
         <input matInput type="text" formControlName="nameOfDriver">
         <mat-error align="end">This field is required</mat-error>
-        <mat-hint example: Preston deSouza></mat-hint>
+        <mat-hint>example: Preston deSouza</mat-hint>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
         <mat-label>Available Time:</mat-label>
-        <input [owlDateTIme]="dt1" [owlDateTimeTrigger]="dt1">
+        <input matInput formControlName="timeAndDateOfAppointment" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1">
         <owl-date-time #dt1></owl-date-time>
     </mat-form-field>
 </form>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { AppService } from '../shared/app.service';
 
 @Component({
   selector: 'app-appointment-booking',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./appointment-booking.component.css']
 })
 export class AppointmentBookingComponent implements OnInit {
-  
-  constructor() { }
+
+  appointmentBookingForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private appService: AppService) {
+  }
 
   ngOnInit() {
+    this.appointmentBookingForm = this.fb.group({
+      nameOfDriver: ['George Washington'],
+      timeAndDateOfAppointment: [''],
+    })
   }
 
 }

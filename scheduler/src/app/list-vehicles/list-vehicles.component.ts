@@ -3,6 +3,7 @@ import { MatTableDataSource, MatPaginator, MatSort, MatTable } from '@angular/ma
 import { CatalogItem } from '../shared/catalog-item';
 import { Subscription } from 'rxjs';
 import { AppService } from '../shared/app.service';
+import { convertUpdateArguments } from '@angular/compiler/src/compiler_util/expression_converter';
 
 @Component({
   selector: 'app-list-vehicles',
@@ -16,6 +17,8 @@ export class ListVehiclesComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['name', 'description', 'price']
 
+  // Added {read:....:false} to both @ViewChild property decorators
+  // Fixed bug fix: of expecting two args
   @ViewChild(MatPaginator, { read: true, static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { read: true, static: false }) sort: MatSort;
 

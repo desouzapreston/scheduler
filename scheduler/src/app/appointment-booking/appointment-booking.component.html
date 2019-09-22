@@ -1,15 +1,28 @@
 <h1>Appointment Booking</h1>
 <form [formGroup]="appointmentBookingForm" [hidden]="success" (ngSubmit)="submitAppointment()" class="normal-form">
+    <!--Name-->
     <mat-form-field appearance="outline">
         <mat-label>Name:</mat-label>
         <input matInput type="text" formControlName="nameOfDriver">
         <mat-error align="end">This field is required</mat-error>
         <mat-hint>example: Preston deSouza</mat-hint>
     </mat-form-field>
-
+    <!--TimeDate-->
     <mat-form-field appearance="outline">
         <mat-label>Available Time:</mat-label>
         <input matInput formControlName="timeAndDateOfAppointment" [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1">
         <owl-date-time #dt1></owl-date-time>
     </mat-form-field>
+    <!--Vehicle-->
+    <mat-form-field appearance="outline">
+        <mat-label>
+            Vehicle Preference: [Not guaranteed]
+        </mat-label>
+        <mat-select formControlName="vehiclePreference">
+            <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.id">
+                {{vehicle.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
 </form>

@@ -8,7 +8,9 @@ import {
   MatFormFieldModule, 
   MatInputModule, 
   MatTableModule, 
-  MatPaginatorModule } from '@angular/material';
+  MatPaginatorModule, 
+  MatOptionModule,
+  MatSelectModule} from '@angular/material';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { MatCardModule } from '@angular/material/card';
 import { CreateVehiclesComponent } from './create-vehicles/create-vehicles.component';
@@ -44,6 +46,8 @@ import { AppointmentBookingComponent } from './appointment-booking/appointment-b
     MatFormFieldModule,
     MatInputModule,
     MatRippleModule,
+    MatOptionModule,
+    MatSelectModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   exports: [

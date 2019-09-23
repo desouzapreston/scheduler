@@ -22,6 +22,9 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
 import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { UserComponent } from './user/user.component';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 @NgModule({
@@ -30,6 +33,9 @@ import { AppointmentBookingComponent } from './appointment-booking/appointment-b
     CreateVehiclesComponent,
     ListVehiclesComponent,
     AppointmentBookingComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

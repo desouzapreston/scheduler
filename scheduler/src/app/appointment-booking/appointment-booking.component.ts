@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { AppService } from '../shared/app.service';
 import { Subscription } from 'rxjs';
 import { Vehicle } from '../shared/vehicle';
+import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-appointment-booking',
@@ -19,7 +20,7 @@ export class AppointmentBookingComponent implements OnInit {
 
   ngOnInit() {
     let vehicles = this.appService.read<Vehicle>("Vehicle")
-    this.subscription = vehicles.subscribe((data: Vehicle[])=> {
+    this.subscription = vehicles.subscribe((data: Vehicle[]) => {
       console.log("Updating dropdown", data)
     })
 
@@ -28,7 +29,6 @@ export class AppointmentBookingComponent implements OnInit {
       timeAndDateOfAppointment: [''],
       vehiclePreference: [''],
     })
-    
   }
-
 }
+  

@@ -18,9 +18,9 @@
         <mat-label>
             Vehicle Preference: [Not guaranteed]
         </mat-label>
-        <mat-select formControlName="vehiclePreference">
+        <mat-select formControlName="vehiclePreference" [value]="vehicles">
             <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.id">
-                {{vehicle.name}}
+                {{vehicle.makeOfVehicle}}
             </mat-option>
         </mat-select>
     </mat-form-field>

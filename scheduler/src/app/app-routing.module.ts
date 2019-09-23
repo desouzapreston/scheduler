@@ -4,6 +4,9 @@ import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
 import { CreateVehiclesComponent } from './create-vehicles/create-vehicles.component';
 import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   { path: "app-list-vehicles", component: ListVehiclesComponent },

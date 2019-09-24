@@ -9,7 +9,6 @@ import { AppService } from '../shared/app.service';
 @Component({
   selector: 'app-create-vehicles',
   templateUrl: './create-vehicles.component.html',
-  styleUrls: ['./create-vehicles.component.css'],
   providers: []
 })
 export class CreateVehiclesComponent implements OnInit {

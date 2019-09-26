@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 
 import { Router } from '@angular/router';
 import { auth } from 'firebase/app';
-import { AnglarFireAuth, AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { User } from 'firebase';
 
 @Injectable({
@@ -31,6 +31,17 @@ export class AuthService {
     } catch (e) {
       alert("Error!" + e.message);
     }
+  }
+
+  async logout() {
+    await this.afAuth.auth.signOut();
+    localStorage.removeItem('user');
+    this.router.navigate(['admin/login']);
+  }
+
+  get isLoggedIn(): boolean {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return user !== null;
   }
 
 }

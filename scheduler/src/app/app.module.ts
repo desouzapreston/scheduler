@@ -19,12 +19,11 @@ import { AppRoutingModule } from './app-routing.module';
 //db
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
 import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { UserComponent } from './user/user.component';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 @NgModule({
@@ -34,8 +33,6 @@ import { UserComponent } from './user/user.component';
     ListVehiclesComponent,
     AppointmentBookingComponent,
     LoginComponent,
-    RegisterComponent,
-    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +52,7 @@ import { UserComponent } from './user/user.component';
     MatOptionModule,
     MatSelectModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   exports: [
   ],

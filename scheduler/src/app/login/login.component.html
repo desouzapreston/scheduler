@@ -9,10 +9,9 @@
                             <img src="https://placeimg.com/128/128/nature">
                         </div>
                         <div class="col-md-8">
-
                             <input type="text" class="form-control mb-2" placeholder="Email" #userEmail required autofocus>
-                            <input type="password" class="form-control mb-2" placeholder="Password" #userPassword required>
-                            <button class="btn btn-lg btn-primary btn-block mb-1">Login</button>
+                            <input type="password" class="form-control mb-2" placeholder="password" #userPassword required>
+                            <button class="btn btn-lg btn-primary btn-block mb-1" (click)="authService.login(userEmail.value, userPassword.value)">Login</button>
                         </div>
                     </div>
                 </div>

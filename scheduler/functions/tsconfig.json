@@ -11,8 +11,5 @@
   "compileOnSave": true,
   "include": [
     "src"
-  ],
-  "exclude": [
-    "lib"
   ]
 }

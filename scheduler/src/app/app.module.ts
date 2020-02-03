@@ -25,7 +25,9 @@ import { ListVehiclesComponent } from './list-vehicles/list-vehicles.component';
 import { AppointmentBookingComponent } from './appointment-booking/appointment-booking.component';
 import { LoginComponent } from './login/login.component';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import * as firebase from 'firebase';
 
+firebase.initializeApp(environment.firebase);
 @NgModule({
   declarations: [
     AppComponent,

@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 // import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AppService } from '../shared/app.service';
+import { Router } from '@angular/router';
 
 
 
@@ -14,7 +15,7 @@ import { AppService } from '../shared/app.service';
 export class CreateVehiclesComponent implements OnInit {
   vehicleCreateForm: FormGroup;
   
-  constructor(private fb: FormBuilder, private appService: AppService) {
+  constructor(private route: Router, private fb: FormBuilder, private appService: AppService) {
   }
   ngOnInit() {
     this.vehicleCreateForm = this.fb.group({
@@ -26,6 +27,7 @@ export class CreateVehiclesComponent implements OnInit {
   onSubmit() {
     let dataObject = this.vehicleCreateForm.value
     this.appService.createUpdate("Vehicle", dataObject)
+    this.route.navigateByUrl('/app-list-vehicles')
   }
 }
 

@@ -1,14 +1,20 @@
+<!-- <div class="main"> -->
 <mat-card>
-    <mat-card-header>
-        <mat-card-title>Vehicle List</mat-card-title>
-    </mat-card-header>
+    <div class="main">
+        <mat-card-title-group>
+            <mat-card-title>Vehicle List</mat-card-title>
+
+            <mat-card-subtitle>
+                <button mat-raised-button (click)="onCreate()" color="primary">Add</button>
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+            </mat-card-subtitle>
+
+        </mat-card-title-group>
+    </div>
     <mat-card-content>
 
-        <button mat-raised-button (click)="onCreate()" color="primary">Add</button>
-
-        <mat-form-field>
-            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-        </mat-form-field>
 
         <table mat-table mat-sort class="mat-elevation-z8 container" [dataSource]="dataSource">
 
@@ -30,7 +36,7 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-            <ng-container matColumnDef="loading">
+            <!-- <ng-container matColumnDef="loading">
                 <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
                     Loading data...
                 </td>
@@ -39,12 +45,12 @@
                 <td mat-footer-cell *matFooterCellDef colspan="displayedColumns.length">
                     No data.
                 </td>
-            </ng-container>
+            </ng-container> -->
 
-            <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}">
+            <!-- <tr mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}">
             </tr>
             <tr mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}">
-            </tr>
+            </tr> -->
         </table>
 
     </mat-card-content>
@@ -53,3 +59,4 @@
         </mat-paginator>
     </mat-card-footer>
 </mat-card>
+<!-- </div> -->

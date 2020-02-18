@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-list-vehicles',
   templateUrl: './list-vehicles.component.html',
+  styleUrls: ['./list-vehicles.component.css']
 })
 export class ListVehiclesComponent implements OnInit, OnDestroy {
 
@@ -48,7 +49,7 @@ export class ListVehiclesComponent implements OnInit, OnDestroy {
   }
 
   onCreate() {
-    this.route.navigateByUrl('/createVehicle');
+    this.route.navigateByUrl('/app-create-vehicles')
   }
 
   applyFilter(filterInput: string) {

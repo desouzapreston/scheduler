@@ -26,6 +26,7 @@ import { AppointmentBookingComponent } from './appointment-booking/appointment-b
 import { LoginComponent } from './login/login.component';
 // import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import * as firebase from 'firebase';
+import { AuthService } from './shared/auth.service';
 
 firebase.initializeApp(environment.firebase);
 @NgModule({
@@ -58,7 +59,10 @@ firebase.initializeApp(environment.firebase);
   ],
   exports: [
   ],
-  providers: [AngularFirestore],
+  providers: [
+    AngularFirestore,
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

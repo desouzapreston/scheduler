@@ -17,7 +17,8 @@ Username & Password:
 desouzapreston@gmail.com
 LetsTakeADrive
 
-Demo: dealership-appointments.web.app
+Demo: 
+https://dealership-appointments.firebaseapp.com/
 
 # Project Is Still Under Development - Stay Tuned!
 

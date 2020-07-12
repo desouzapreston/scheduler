@@ -1,4 +1,4 @@
-# scheduler
+# Scheduler
 Dealership POS Scheduler Software Featuring a DataService for dynamic data driven design. 
 Website doesn't have a currently landing page so I'm working on a nice layout but the core logic behind the code has more pressing things to be fixed first. 
 

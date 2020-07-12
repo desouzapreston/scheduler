@@ -14,7 +14,9 @@ Scheduling Page (in development) to allow multiple users to reserve one vehicle 
 This project is in long development due to the client reserving a seperate software service. This meant this project got put kind of on hold. But it will be finished in the near future just for showcase purposes.
 
 Username & Password:
+
 desouzapreston@gmail.com
+
 LetsTakeADrive
 
 Demo: 

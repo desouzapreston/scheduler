@@ -26,8 +26,8 @@
                             "src/styles.css",
                             "node_modules/@fortawesome/fontawesome-free/css/all.css"
                         ],
-                        "scripts": [],
-                        "es5BrowserSupport": true
+                        "scripts": []
+
                     },
                     "configurations": {
                         "production": {

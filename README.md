@@ -4,6 +4,16 @@
 
 ### Website doesn't have a currently landing page so I'm working on a nice layout but the core logic behind the code has more pressing things to be fixed first. 
 
+### This project is in long development due to the client reserving a seperate software service. This meant this project got put kind of on hold. But it will be finished in the near future just for showcase purposes.
+
+### Demo: https://dealership-appointments.firebaseapp.com/
+
+### Username & Password:
+
+desouzapreston@gmail.com
+
+LetsTakeADrive
+
 
 ### What's going on with this site:
 
@@ -20,19 +30,6 @@ Admin Dashboard - Could easily bootstrap it but I want to make it from scratch
 
 Scheduling Page (in development) to allow multiple users to reserve one vehicle per slot available with no conflicts
 
-
-### This project is in long development due to the client reserving a seperate software service. This meant this project got put kind of on hold. But it will be finished in the near future just for showcase purposes.
-
-
-### Username & Password:
-
-desouzapreston@gmail.com
-
-LetsTakeADrive
-
-
-### Demo: 
-https://dealership-appointments.firebaseapp.com/
 
 
 # Project Is Still Under Development - Stay Tuned!
